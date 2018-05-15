@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WIT</string>
+    <string name="main_guide_default">\&quot;무엇을\n잃어버리셨나요?\&quot;</string>
+    <string name="main_guide_searching">\&quot;말씀하세요\n듣고있습니다.\&quot;</string>
+    <string name="main_guide_result1">\&quot;혹시 찾으시는 물건이\n</string>
+    <string name="main_guide_result2"> 인가요?\&quot;</string>
+    <string name="main_menu_nickname">OneTwoPunch\&apos;s Home</string>
+
+    <string name="main_menu_home">홈</string>
+    <string name="main_menu_notify">공지사항</string>
+    <string name="main_menu_option">환경설정</string>
+    <string name="main_menu_list">기기목록</string>
+</resources>
