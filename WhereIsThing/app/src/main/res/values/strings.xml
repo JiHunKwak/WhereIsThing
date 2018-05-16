@@ -10,4 +10,24 @@
     <string name="main_menu_notify">공지사항</string>
     <string name="main_menu_option">환경설정</string>
     <string name="main_menu_list">기기목록</string>
+
+    <string name="list_title">등록된 물건</string>
+    <string name="list_guide">등록된 물건이 없어요</string>
+
+    <string name="option_title">환경설정</string>
+    <string name="option_title_sound">소리설정</string>
+    <string name="option_title_language">언어설정</string>
+    <string name="option_title_theme">테마설정</string>
+    <string name="option_title_background">백그라운드설정</string>
+
+    <string name="add_guide_default">\&quot;마이크를 누르고\n등록할 물건의 이름을\n말해주세요.\&quot;</string>
+    <string name="add_guide_listening">\&quot;말씀하세요\n듣고있습니다.\&quot;</string>
+    <string name="add_guide_more">\&quot;다시 한번\n물건의 이름을\n말해주세요.\&quot;</string>
+    <string name="add_guide_done">\&quot;등록이\n완료되었습니다.\&quot;</string>
+    <string name="add_per_default">0%</string>
+    <string name="add_per_25">25%</string>
+    <string name="add_per_50">50%</string>
+    <string name="add_per_75">75%</string>
+    <string name="add_per_full">100%</string>
+
 </resources>

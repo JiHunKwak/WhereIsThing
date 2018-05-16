@@ -1,5 +1,6 @@
 package onetwopunch.capstone.com.whereisthing.View;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,10 +26,16 @@ public class MainActivity extends AppCompatActivity {
     private Animation anim_slide_left_in;
     private Animation anim_slide_left_out;
 
+    private TextView tv_menu_title;
+
     private LinearLayout ll_menu_home;
     private LinearLayout ll_menu_notify;
     private LinearLayout ll_menu_option;
     private LinearLayout ll_menu_list;
+
+    private Intent notify;
+    private Intent option;
+    private Intent moduleList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().hide();
+
+        notify = new Intent(getApplicationContext(), NotifyActivity.class);
+        option = new Intent(getApplicationContext(), OptionActivity.class);
+        moduleList = new Intent(getApplicationContext(), ModuleListActivity.class);
 
         tv_main_guide = (TextView) findViewById(R.id.tv_main_guide);
         tv_main_guide.setTypeface(Typeface.createFromAsset(getAssets(), "mainfont.ttf"));
@@ -93,9 +104,14 @@ public class MainActivity extends AppCompatActivity {
         ll_menu_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                setIntentFlag(moduleList);
+                startActivity(moduleList);
                 // 기기목록 액티비티 인텐트
             }
         });
+
+        tv_menu_title = (TextView) findViewById(R.id.tv_menu_title);
+        tv_menu_title.setTypeface(Typeface.createFromAsset(getAssets(), "menufont.ttf"));
 
         iv_main_mic = (ImageView) findViewById(R.id.iv_main_mic);
         iv_main_micing = (ImageView) findViewById(R.id.iv_main_micing);
@@ -103,10 +119,15 @@ public class MainActivity extends AppCompatActivity {
         iv_main_mic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 음성인식 시작
-                iv_main_mic.setVisibility(View.INVISIBLE);
-                iv_main_micing.setVisibility(View.VISIBLE);
-                tv_main_guide.setText(R.string.main_guide_searching);
+                if(BaseActivity.listArr.isEmpty()){
+                    // 다이얼로그 박스
+                }else {
+                    // 음성인식 시작
+                    iv_main_mic.setVisibility(View.INVISIBLE);
+                    iv_main_micing.setVisibility(View.VISIBLE);
+                    tv_main_guide.setText(R.string.main_guide_searching);
+                    BaseActivity.dbm.loadData();
+                }
             }
         });
 
@@ -122,4 +143,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    public void setIntentFlag(Intent intent){
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+    }
+
 }

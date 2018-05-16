@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
     tools:context=".View.ModuleListActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <ImageView
+            android:id="@+id/iv_list_back"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_gravity="left|fill_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            app:srcCompat="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:text="@string/list_title"
+            android:textColor="@color/colorBlackFT"
+            android:textSize="22dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_list_add"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="25dp"
+            app:srcCompat="@drawable/floting_add" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp" />
+
+        <TextView
+            android:id="@+id/tv_list_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/list_guide"
+            android:textColor="@color/colorMainFT"
+            android:textSize="25sp"
+            android:visibility="visible" />
+    </FrameLayout>
+</LinearLayout>
