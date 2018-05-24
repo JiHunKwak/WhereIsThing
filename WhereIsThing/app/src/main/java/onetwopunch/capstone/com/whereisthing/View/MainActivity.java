@@ -97,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
         ll_menu_option.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                setIntentFlag(option);
+                startActivity(option);
                 // 환경설정 액티비티 인텐트
             }
         });

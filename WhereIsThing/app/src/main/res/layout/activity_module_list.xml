@@ -11,7 +11,10 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp">
+        android:layout_height="35dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
 
         <ImageView
             android:id="@+id/iv_list_back"
