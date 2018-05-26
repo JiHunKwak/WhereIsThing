@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">WIT</string>
     <string name="main_guide_default">\&quot;What Is\nYour Losing Item?\&quot;</string>
-    <string name="main_guide_searching">\&quot;Keep Talking.\nI'm Listening.\&quot;</string>
-    <string name="main_guide_result1">\&quot;Here Is Your Item!\n</string>
-    <string name="main_guide_result2"> Is It Correct?\&quot;</string>
+    <string name="main_guide_searching">\&quot;Keep Talking.\nI\&apos;m Listening.\&quot;</string>
+    <string name="main_guide_result1">\&quot;Here Is Your Item!\n\&lt;</string>
+    <string name="main_guide_result2">\&gt; Is It Correct?\&quot;</string>
+    <string name="main_guide_success">\&quot;Found It!\nPlease Go To The Sound.\&quot;</string>
+    <string name="main_guide_fail_recommend">\&quot;Is There Anything\nYou Are Looking For?\&quot;</string>
+    <string name="main_guide_fail">\&quot;Please Try Again.\&quot;</string>
+    <string name="main_fail_guide">\&quot;Are You Blocking The Microphone?\nOr Is It Noisy There?\nPlease Tell Me Exactly\nAfter You Checking.\&quot;</string>
     <string name="main_menu_nickname">OneTwoPunch\&apos;s Home</string>
 
     <string name="main_menu_home">Home</string>
@@ -12,7 +16,8 @@
     <string name="main_menu_list">Item List</string>
 
     <string name="list_title">Item List</string>
-    <string name="list_guide">No Item.. TT</string>
+    <string name="list_guide">No Items.. TT</string>
+    <string name="list_item_full">Can not add more item.</string>
 
     <string name="option_title">Settings</string>
     <string name="option_title_sound">Sound Setting</string>
@@ -22,12 +27,16 @@
 
     <string name="add_guide_default">\&quot;Put The Button\nAnd Speak Name\nTo Me.\&quot;</string>
     <string name="add_guide_listening">\&quot;Keep Talking.\nI'm Listening.\&quot;</string>
-    <string name="add_guide_more">\&quot;Please\nSpeak The Name To Me\nAgain.\&quot;</string>
-    <string name="add_guide_done">\&quot;Inrollment Is\nDone.\&quot;</string>
+    <string name="add_guide_more">\&quot;Please\nSpeak The Item's Name\&quot;</string>
+    <string name="add_guide_done">\&quot;Enrollment Is\nDone.\&quot;</string>
     <string name="add_per_default">0%</string>
     <string name="add_per_25">25%</string>
     <string name="add_per_50">50%</string>
     <string name="add_per_75">75%</string>
     <string name="add_per_full">100%</string>
+
+
+    <string name="alert_addNow">Add Item Now!</string>
+    <string name="alert_guide">No Items.. TT</string>
 
 </resources>

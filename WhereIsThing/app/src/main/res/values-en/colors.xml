@@ -10,4 +10,7 @@
     <color name="colorMainFT">#575757</color>
     <color name="colorAdd">#4793d6</color>
     <color name="colorOption">#838383</color>
+    <color name="colorProgressbar">#BFDEF9</color>
+    <color name="colorFull">#4793D6</color>
+    <color name="colorItem">#F3F3F3</color>
 </resources>

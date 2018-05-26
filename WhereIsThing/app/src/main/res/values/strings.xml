@@ -2,8 +2,12 @@
     <string name="app_name">WIT</string>
     <string name="main_guide_default">\&quot;무엇을\n잃어버리셨나요?\&quot;</string>
     <string name="main_guide_searching">\&quot;말씀하세요\n듣고있습니다.\&quot;</string>
-    <string name="main_guide_result1">\&quot;혹시 찾으시는 물건이\n</string>
-    <string name="main_guide_result2"> 인가요?\&quot;</string>
+    <string name="main_guide_result1">\&quot;혹시 찾으시는 물건이\n\&lt;</string>
+    <string name="main_guide_result2">\&gt;인가요?\&quot;</string>
+    <string name="main_guide_success">\&quot;찾았습니다!\n소리가 나는 곳으로\n가보세요.\&quot;</string>
+    <string name="main_guide_fail_recommend">\&quot;혹시 찾으시는 물건이\n다음 중 있으신가요?\&quot;</string>
+    <string name="main_guide_fail">\&quot;다시 한번 말해주세요.\&quot;</string>
+    <string name="main_fail_guide">\&quot;혹시 마이크를 가리셨거나,\n주변이 시끄럽지 않은가요?\n확인 후 또박또박 말씀해주세요 :)\&quot;</string>
     <string name="main_menu_nickname">OneTwoPunch\&apos;s Home</string>
 
     <string name="main_menu_home">홈</string>
@@ -13,6 +17,7 @@
 
     <string name="list_title">등록된 물건</string>
     <string name="list_guide">등록된 물건이 없어요</string>
+    <string name="list_item_full">더이상 물건을 등록할 수 없습니다.</string>
 
     <string name="option_title">환경설정</string>
     <string name="option_title_sound">소리설정</string>
@@ -29,5 +34,8 @@
     <string name="add_per_50">50%</string>
     <string name="add_per_75">75%</string>
     <string name="add_per_full">100%</string>
+
+    <string name="alert_addNow">지금 등록하러가기</string>
+    <string name="alert_guide">아직 등록된 물건이 없습니다.</string>
 
 </resources>

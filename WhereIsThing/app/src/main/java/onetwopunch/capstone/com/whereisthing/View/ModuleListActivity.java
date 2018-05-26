@@ -8,8 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import onetwopunch.capstone.com.whereisthing.Controller.Adapter.ModuleListAdapter;
+import onetwopunch.capstone.com.whereisthing.Model.Constants;
 import onetwopunch.capstone.com.whereisthing.R;
 
 public class ModuleListActivity extends AppCompatActivity {
@@ -43,9 +45,14 @@ public class ModuleListActivity extends AppCompatActivity {
         iv_list_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setIntentFlag(add);
-                startActivity(add);
-                finish();
+                if(BaseActivity.listArr.size() >= Constants.ITEM_LIST_MAX_SIZE){
+                    String messageTemp = getString(R.string.list_item_full);
+                    Toast.makeText(ModuleListActivity.this, messageTemp, Toast.LENGTH_LONG).show();
+                }else {
+                    setIntentFlag(add);
+                    startActivity(add);
+                    finish();
+                }
             }
         });
 
@@ -64,7 +71,7 @@ public class ModuleListActivity extends AppCompatActivity {
             tv_list_guide.setVisibility(View.INVISIBLE);
             rv_list_list.setVisibility(View.VISIBLE);
 
-            mlAdapter = new ModuleListAdapter(BaseActivity.listArr);
+            mlAdapter = new ModuleListAdapter(BaseActivity.listArr, Constants.LAYOUT_SELECTOR_MODULE_LIST);
 
             rv_list_list.setLayoutManager(llManager);
             rv_list_list.setAdapter(mlAdapter);

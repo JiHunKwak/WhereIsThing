@@ -84,7 +84,7 @@
         android:layout_marginBottom="130dp"
         android:gravity="center"
         android:text="@string/add_per_default"
-        android:textColor="@color/colorMainFT"
+        android:textColor="@color/colorBasicBG"
         android:textSize="30dp" />
 
     <LinearLayout
@@ -101,6 +101,7 @@
             android:layout_marginRight="35dp"
             android:layout_marginTop="85dp"
             android:layout_weight="5"
+            android:lineSpacingExtra="4dp"
             android:text="@string/add_guide_default"
             android:textColor="@color/colorMainFT"
             android:textSize="23dp" />

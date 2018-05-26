@@ -56,6 +56,7 @@ public class BaseActivity extends AppCompatActivity {
 
         dbm = new DBManager(getApplicationContext(), "MODULE.db", null, 1);
         dbm.clearDB();
+        dbm.insert("testModule1234", "리모컨", "리모컨", "리모콘", "이모컨", "이모콘", 1);
         dbm.loadData();
 
         Handler handler = new Handler();
@@ -113,4 +114,5 @@ public class BaseActivity extends AppCompatActivity {
     }
 }
 // 5/17: 데이터 인서트, 환경설정 레이아웃
-// 5/24: 앱 아이콘, 메인 음성작업, 영어버전작업, 블루투스작업, 환경설정작업, 공지사항작업
+// 5/24: 앱 아이콘, 메인 음성작업, 영어버전작업, 블루투스작업, 환경설정작업, 공지사항작업, 테마 작업, 다이얼로그 작업
+// 5/25: 메인 음성, 블루투스, 환경설정, 공지사항, 테마, 언어(내부)

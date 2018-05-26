@@ -8,20 +8,29 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import onetwopunch.capstone.com.whereisthing.Model.Constants;
 import onetwopunch.capstone.com.whereisthing.Model.ModuleListModel;
 import onetwopunch.capstone.com.whereisthing.R;
 
 public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.ViewHolder>{
 
     private List<ModuleListModel> tempArr;
+    private int layoutSelector;
+    private int layoutTemp;
 
-    public ModuleListAdapter(List<ModuleListModel> tempArr) {
+    public ModuleListAdapter(List<ModuleListModel> tempArr, int layoutSelector) {
         this.tempArr = tempArr;
+        this.layoutSelector = layoutSelector;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_module_list, parent, false));
+        if(layoutSelector == Constants.LAYOUT_SELECTOR_MAIN_LIST){
+            layoutTemp = R.layout.item_main_list;
+        } else if(layoutSelector == Constants.LAYOUT_SELECTOR_MODULE_LIST){
+            layoutTemp = R.layout.item_module_list;
+        }
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(layoutTemp, parent, false));
     }
 
     @Override

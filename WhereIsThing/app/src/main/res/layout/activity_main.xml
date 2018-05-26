@@ -30,6 +30,7 @@
             android:layout_marginRight="35dp"
             android:layout_marginTop="85dp"
             android:layout_weight="5"
+            android:lineSpacingExtra="4dp"
             android:text="@string/main_guide_default"
             android:textColor="@color/colorMainFT"
             android:textSize="23dp" />
@@ -38,6 +39,51 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_main_sissor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="100dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/mic_sissor" />
+
+            <ImageView
+                android:id="@+id/iv_main_fail"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/mic_sissor" />
+
+            <ImageView
+                android:id="@+id/iv_main_check"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="100dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/mic_check" />
+
+            <ImageView
+                android:id="@+id/iv_main_done"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/mic_check" />
+
+            <ProgressBar
+                android:id="@+id/pb_main"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorProgressbar"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/iv_main_mic"
@@ -55,6 +101,47 @@
                 app:srcCompat="@drawable/micing" />
         </FrameLayout>
 
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_main_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="125dp"
+        android:layout_weight="0.5"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_tip"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="115dp"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_main_tip"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="6dp"
+            app:srcCompat="@drawable/tip_icon" />
+
+        <TextView
+            android:id="@+id/tv_main_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/main_fail_guide" />
     </LinearLayout>
 
     <LinearLayout
